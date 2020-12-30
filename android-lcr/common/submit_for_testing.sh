@@ -20,14 +20,14 @@ if [ -n "${DRY_RUN}" ]; then
     if [ ! -e ${BASE_PATH}/openembedded-lkft/submit_for_testing.py ]; then
         ## called via jenkins
         rm -rf configs
-        git clone --depth 1 http://git.linaro.org/ci/job/configs.git
+        git clone --depth 1 http://github.com/beylsp/lava-job-definitions.git configs
         BASE_PATH=`pwd`/configs
     fi
     export BASE_PATH
 else
     ## called via jenkins
     rm -rf configs
-    git clone --depth 1 http://git.linaro.org/ci/job/configs.git
+    git clone --depth 1 http://github.com/beylsp/lava-job-definitions.git configs
     export EXTRA_PARAMS=""
     export BASE_PATH=`pwd`/configs
 fi
