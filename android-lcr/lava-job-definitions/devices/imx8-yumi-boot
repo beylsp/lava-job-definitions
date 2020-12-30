@@ -1,0 +1,5 @@
+- boot:
+    namespace: target
+    timeout:
+      minutes: 5
+    method: fastboot

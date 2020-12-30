@@ -1,0 +1,23 @@
+{% extends device_type %}
+
+{% block job_name %}{{JOB_NAME}}-{{ANDROID_META_BUILD}}-{{testname}}{% endblock job_name %}
+
+{% block test_target %}
+{{ super() }}
+- test:
+    namespace: tlxc
+    timeout:
+      minutes: {% if job_timeout is defined %}{{ job_timeout-5|int|abs }}{% else %}120{% endif %}
+    definitions:
+    - repository: https://github.com/beylsp/lava-test-definitions.git
+      from: git
+      path: automated/android/act/act.yaml
+      params:
+        TEST_PARAMS: "{{testcommand}}"
+{% if ACTS_PKG_URL is defined %}
+        TEST_URL: "{{ACTS_PKG_URL}}"
+{% else %}
+        TEST_URL: "http://..."
+{% endif %}
+      name: {{testname}}
+{% endblock test_target %}

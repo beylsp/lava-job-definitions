@@ -1,0 +1,14 @@
+{% extends "android.jinja2" %}
+
+{% block device_type %}imx8-yumi{% endblock %}
+
+{% block deploy_target %}
+{% include "devices/imx8-yumi-deploy" %}
+{% endblock deploy_target %}
+
+{% block boot_target %}
+{% include "devices/imx8-yumi-boot" %}
+{% endblock boot_target %}
+
+{% block test_target %}
+{% endblock test_target %}

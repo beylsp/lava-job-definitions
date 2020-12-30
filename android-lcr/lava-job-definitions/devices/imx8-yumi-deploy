@@ -1,0 +1,18 @@
+- deploy:
+    timeout:
+      minutes: 15
+    to: fastboot
+    namespace: target
+    images:
+      boot:
+        url: {{DOWNLOAD_URL}}/boot.img
+      dtbo:
+        url: {{DOWNLOAD_URL}}/dtbo-yumi-all.img
+      system:
+        url: {{DOWNLOAD_URL}}/system.img
+      vbmeta:
+        url: {{DOWNLOAD_URL}}/vbmeta-yumi-all.img
+      vendor:
+        url: {{DOWNLOAD_URL}}/vendor.img
+      product:
+        url: {{DOWNLOAD_URL}}/product.img
