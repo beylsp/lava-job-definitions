@@ -14,6 +14,7 @@
       path: automated/android/act/act.yaml
       params:
         TEST_PARAMS: "{{testcommand}}"
+        TEST_CONFIG_TEMPLATE: "{{testconfig}}"
 {% if ACTS_PKG_URL is defined %}
         TEST_URL: "{{ACTS_PKG_URL}}"
 {% else %}

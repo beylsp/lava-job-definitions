@@ -1,5 +1,6 @@
 {% extends "master/template-acts.yaml.jinja2" %}
 
 {% set job_timeout = 300 %}
-{% set testcommand = "-tp tools/test/connectivity/acts/tests/google/ble/api -tc BleScanApiTest BleAdvertiseApiTest -ti 1" %}
+{% set testcommand = "-tp acts_tests/acts/tests/google/ble/api -tb single -tc BleScanApiTest BleAdvertiseApiTest -ti 1" %}
+{% set testconfig = "acts_tests/acts/tests/google/ble/config.json.template" %}
 {% set testname = "acts-ble-api" %}
