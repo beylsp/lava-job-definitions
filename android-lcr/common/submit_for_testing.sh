@@ -92,7 +92,7 @@ python ${SCRIPT_PATH}/submit_for_testing.py \
   --build-number ${BUILD_NUMBER} \
   --lava-server ${LAVA_SERVER} \
   --qa-server ${QA_SERVER} \
-  --qa-server-team lcr \
+  --qa-server-team ${QA_SERVER_TEAM} \
   --qa-server-project ${QA_SERVER_PROJECT} \
   --git-commit ${BUILD_NUMBER} \
   --quiet \

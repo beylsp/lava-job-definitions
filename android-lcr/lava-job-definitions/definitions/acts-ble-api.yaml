@@ -2,5 +2,5 @@
 
 {% set job_timeout = 300 %}
 {% set testcommand = "-tp acts_tests/acts/tests/google/ble/api -tb single -tc BleScanApiTest BleAdvertiseApiTest -ti 1" %}
-{% set testconfig = "acts_tests/acts/tests/google/ble/config.json.template" %}
+{% set testconfig = "acts_tests/acts/tests/google/ble/api/config.json.template" %}
 {% set testname = "acts-ble-api" %}
