@@ -50,18 +50,6 @@ protocols:
       minutes: 5
     method: lxc
 
-- test:
-    namespace: tlxc
-    timeout:
-      minutes: 10
-    definitions:
-    - repository: http://github.com/beylsp/lava-test-definitions.git
-      from: git
-      path: automated/linux/android-platform-tools/install.yaml
-      name: install-android-platform-tools-r2701
-      parameters:
-        LINK: 'https://dl.google.com/android/repository/platform-tools-latest-linux.zip'
-
 {% block deploy_target %}
 {% endblock deploy_target %}
 
